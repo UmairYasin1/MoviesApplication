@@ -1,0 +1,73 @@
+﻿@model IEnumerable<MoviesApplication.Models.MovieViewModel>
+@using MoviesApplication.Models
+
+@{
+
+    ViewBag.Title = "List of Movies";
+    ApplicationDbContext db = new ApplicationDbContext();
+
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            Name
+        </th>
+        <th>
+            Description
+        </th>
+        <th>
+            Release Date
+        </th>
+        <th>
+            Genre
+        </th>
+        <th>
+            Duration
+        </th>
+        <th>
+            Rating
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        //var genreName = db.Genre.Where(x => x.GenreId.Equals(item.GenreId)).FirstOrDefault();
+
+        <tr>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @item.Description
+            </td>
+            <td>
+                @item.ReleaseDate
+            </td>
+            <td>
+                @item.GenreName
+            </td>
+            <td>
+                @item.Duration
+            </td>
+            <td>
+                @item.Rating
+            </td>
+            <td>
+                @Html.ActionLink("View Details", "Details", new { id = item.MovieId })
+                <span>|</span>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MovieId })
+                <span>|</span>
+                @Html.ActionLink("Delete", "Delete", new { id = item.MovieId })
+            </td>
+        </tr>
+    }
+</table>
+

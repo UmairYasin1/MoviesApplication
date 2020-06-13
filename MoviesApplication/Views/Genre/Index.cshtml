@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MoviesApplication.Models.GenreViewModel>
+
+@{
+    ViewBag.Title = "List of Genre";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.Name
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.ActionLink("View Details", "Details", new { id = item.GenreId })
+                <span>|</span>
+                @Html.ActionLink("Edit", "Edit", new { id = item.GenreId })
+                <span>|</span>
+                @Html.ActionLink("Delete", "Delete", new { id = item.GenreId })
+
+            </td>
+        </tr>
+    }
+</table>
+
