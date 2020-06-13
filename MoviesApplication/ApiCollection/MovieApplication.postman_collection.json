@@ -1,0 +1,239 @@
+{
+	"info": {
+		"_postman_id": "fccdbb35-609e-4b13-8735-d14b3c4ae77a",
+		"name": "MovieApplication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "indexGenre",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44397/api/service/indexGenre",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44397",
+					"path": [
+						"api",
+						"service",
+						"indexGenre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "showGenre",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:44397/api/service/showGenre?Id=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44397",
+					"path": [
+						"api",
+						"service",
+						"showGenre"
+					],
+					"query": [
+						{
+							"key": "Id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insertGenre",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Name\": \"History\",\r\n    \"Description\": \"History Description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44397/api/service/insertGenre",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44397",
+					"path": [
+						"api",
+						"service",
+						"insertGenre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteGenre",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44397/api/service/deleteGenre?Id=5",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44397",
+					"path": [
+						"api",
+						"service",
+						"deleteGenre"
+					],
+					"query": [
+						{
+							"key": "Id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "indexMovie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44397/api/service/indexMovie",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44397",
+					"path": [
+						"api",
+						"service",
+						"indexMovie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "showMovie",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44397/api/service/showMovie?Id=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44397",
+					"path": [
+						"api",
+						"service",
+						"showMovie"
+					],
+					"query": [
+						{
+							"key": "Id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insertMovie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Name\": \"Runaway\",\r\n    \"Description\": \"Action type movie\",\r\n    \"ReleaseDate\": \"2020-06-30\",\r\n    \"GenreId\": 1,\r\n    \"Duration\": \"3 Hours\",\r\n    \"Rating\": \"5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44397/api/service/insertMovie",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44397",
+					"path": [
+						"api",
+						"service",
+						"insertMovie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteMovie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44397/api/service/deleteMovie?Id=3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44397",
+					"path": [
+						"api",
+						"service",
+						"deleteMovie"
+					],
+					"query": [
+						{
+							"key": "Id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
